@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="v-search">
+    <view style="color:#fff;padding: 3px 0 0 15px;font-size: 14px;">深圳</view>
+    <view class="v-search-box">
+      <icon type='search' style="padding:5px;"></icon>
+      <input placeholder="搜索" placeholder-class="placeholder-class" style="padding:2px 0" confirm-type="search"></input>
+    </view>
+    <icon type="search" style="padding:6px;"></icon>
+  </view>
+  <swiper indicator-dots="true" circular="true" autoplay="true" class="swiper-box">
+    <block wx:for="{{banners}}" wx:key="id">
+      <swiper-item>
+        <image bindtap="tapBanner" data-id="{{item.businessId}}" src="{{item.picUrl}}_m" class="slide-image" width="750rpx" height="562.5rpx"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
